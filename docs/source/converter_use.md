@@ -17,7 +17,13 @@ $docPath = $_FILES["documentFile"]["tmp_name"];
 use RamowkaTvRepublika\RamowkaTvRepublika;
 
 try {
-  $processor = new RamowkaTvRepublika($_ENV);
+  $mysqlCredentials = [
+    "MYSQL_HOST" => "localhost",
+    "MYSQL_USER" => "root",
+    "MYSQL_PASSWORD" => "",
+    "MYSQL_DB_NAME" => "ramowka-import-tv-republika"
+  ];
+  $processor = new RamowkaTvRepublika($mysqlCredentials);
   $results = $processor->importDocument($docPath);
 } catch(Exception $e) {
   echo "Błąd";

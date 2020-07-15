@@ -1,7 +1,7 @@
 # ramowka-import-tv-republika
 
 ## Dokumentacja
-> https://lideritpl.github.io/ramowka-import-tv-republika-test
+> https://lideritpl.github.io/ramowka-import-tv-republika/
 
 ## Testy
 > https://ramowka-import-tv-republika.liderit.online/

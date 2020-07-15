@@ -20,7 +20,13 @@
 <pre class="code-block hljs"><code class="language-php php"><span class="hljs-keyword">use</span> <span class="hljs-title">RamowkaTvRepublika</span>\<span class="hljs-title">RamowkaTvRepublika</span>;
 
 <span class="hljs-keyword">try</span> {
-  $processor = <span class="hljs-keyword">new</span> RamowkaTvRepublika($_ENV);
+  $mysqlCredentials = [
+    <span class="hljs-string">&quot;MYSQL_HOST&quot;</span> =&gt; <span class="hljs-string">&quot;localhost&quot;</span>,
+    <span class="hljs-string">&quot;MYSQL_USER&quot;</span> =&gt; <span class="hljs-string">&quot;root&quot;</span>,
+    <span class="hljs-string">&quot;MYSQL_PASSWORD&quot;</span> =&gt; <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;MYSQL_DB_NAME&quot;</span> =&gt; <span class="hljs-string">&quot;ramowka-import-tv-republika&quot;</span>
+  ];
+  $processor = <span class="hljs-keyword">new</span> RamowkaTvRepublika($mysqlCredentials);
   $results = $processor-&gt;importDocument($docPath);
 } <span class="hljs-keyword">catch</span>(<span class="hljs-built_in">Exception</span> $e) {
   <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;Błąd&quot;</span>;
