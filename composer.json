@@ -1,0 +1,35 @@
+{
+    "name": "liderit/ramowka-import-tv-republika",
+    "version": "1.0.0",
+    "description": "#PHP7",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Arek N",
+            "email": "nowyarek@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-mysqli": "*",
+        "phpoffice/phpspreadsheet": "^1.14"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "RamowkaTvRepublika\\": "",
+            "RamowkaTvRepublika\\Bootstrap\\": "bootstrap",
+            "RamowkaTvRepublika\\Exceptions\\": "exceptions",
+            "RamowkaTvRepublika\\Models\\": "models"
+        },
+        "files": [
+            "bootstrap/Utils/dump.php",
+            "bootstrap/MySQL/getMysql.php"
+        ]
+    }
+}

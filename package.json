@@ -1,0 +1,27 @@
+{
+  "name": "mt940-converter",
+  "version": "1.0.0",
+  "description": "---",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build-docs": "mkdirp docs/dist && mdtodoc docs/source/*.md --layout page --theme github -d docs/dist"
+  },
+  "keywords": [
+    "PHP",
+    "MT940",
+    "Bank"
+  ],
+  "author": "Arek N",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiderITpl/mt940-converter.git"
+  },
+  "homepage": "https://github.com/LiderITpl/mt940-converter#readme",
+  "dependencies": {
+    "markdown-to-document": "^0.13.0",
+    "mkdirp": "^1.0.4"
+  }
+}
